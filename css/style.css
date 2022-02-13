@@ -9,6 +9,7 @@
   --background-active-btn-hero: #188ce8;
   --background-btn-lite: #f5f4fa;
   --temporary-color: #000000;
+  --btn-shadow: rgba(0, 0, 0, 0.25);
   --secondary-background-color: #2f303a;
 }
 body {
@@ -74,7 +75,6 @@ img {
   display: flex;
 }
 .logo-accent {
-  margin-right: 92px;
   font-family: var(--secondary-font-family);
   font-weight: 700;
   font-size: 26px;
@@ -84,6 +84,7 @@ img {
 }
 .logo-header {
   color: var(--temporary-color);
+  margin-right: 92px;
 }
 .nav-list {
   display: flex;
@@ -112,7 +113,10 @@ img {
   background-color: var(--secondary-background-color);
   text-align: center;
 }
-
+.container-hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
 .hero-title {
   font-weight: 900;
   font-size: 44px;
@@ -120,6 +124,7 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--tertiary-text-colour-lite);
+  margin-bottom: 30px;
 }
 
 .hero-btn {
@@ -213,12 +218,17 @@ img {
 .footer {
   background-color: var(--secondary-background-color);
 }
+.container-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 
 .logo-footer {
   color: var(--tertiary-text-colour-lite);
 }
 
 .footer-list {
+  margin-top: 20px;
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -235,7 +245,18 @@ img {
 }
 
 /* ====== Портфолио ======= */
+.filter-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.filter-item:not(:last-child) {
+  margin-right: 8px;
+}
 .filter-btn {
+  border: transparent;
+  border-radius: 4px;
+  padding: 6px 22px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
@@ -247,6 +268,17 @@ img {
 .filter-btn:focus {
   background-color: var(--background-active-btn-hero);
   color: var(--tertiary-text-colour-lite);
+  filter: drop-shadow(0px 4px 4px var(--btn-shadow));
+}
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+.projects-item {
+  margin-left: 30px;
+  margin-bottom: 30px;
 }
 .projects-title {
   font-size: 18px;
