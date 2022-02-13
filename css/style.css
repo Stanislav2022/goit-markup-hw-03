@@ -11,6 +11,7 @@
   --temporary-color: #000000;
   --btn-shadow: rgba(0, 0, 0, 0.25);
   --secondary-background-color: #2f303a;
+  --border-color: #eeeeee;
 }
 body {
   font-family: var(--primery-font-family);
@@ -150,10 +151,11 @@ img {
 .advantage-list {
   display: flex;
   justify-content: space-between;
+  margin-left: -30px;
 }
-.advantage-list-item:not(:last-child) {
-  margin-right: 30px;
-  max-width: 270px;
+.advantage-list-item {
+  flex-basis: calc((100%-120px) / 4);
+  margin-left: 30px;
 }
 .advantage-title {
   font-size: 14px;
@@ -183,10 +185,11 @@ img {
 .our-work-list {
   display: flex;
   justify-content: space-between;
+  margin-left: -30px;
 }
-.our-work-item:not(:last-child) {
-  margin-right: 30px;
-  max-width: 370px;
+.our-work-item {
+  flex-basis: calc((100% - 90px) / 3);
+  margin-left: 30px;
 }
 
 /* ===== Наша команда ====== */
@@ -199,9 +202,19 @@ img {
   margin-left: -30px;
 }
 .our-team-item {
+  flex-basis: calc((100% - 120px) / 4);
   margin-left: 30px;
+  border: transparent
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px var(--btn-shadow));
+}
+.our-team-person {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
 }
 .our-team-name {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -277,10 +290,17 @@ img {
   margin-bottom: -30px;
 }
 .projects-item {
+  flex-basis: calc((100% - 90px) / 3);
   margin-left: 30px;
   margin-bottom: 30px;
 }
+.projects-decor {
+  border: 1px solid var(--border-color);
+  border-top: none;
+  padding: 20px 24px;
+}
 .projects-title {
+  padding-bottom: 4px;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
