@@ -12,6 +12,7 @@
   --btn-shadow: rgba(0, 0, 0, 0.25);
   --secondary-background-color: #2f303a;
   --border-color: #eeeeee;
+  --border-header-color: #ececec;
 }
 body {
   font-family: var(--primery-font-family);
@@ -59,8 +60,9 @@ img {
   padding-left: 15px;
   padding-right: 15px;
 }
-/*======== Шапка ========*/
+/*======== header ========*/
 .header {
+  border-bottom: 1px solid var(--border-header-color);
   padding-top: 24px;
   padding-bottom: 24px;
   font-weight: 500;
@@ -109,7 +111,7 @@ img {
   color: currentColor;
 }
 
-/*========== Герой ===========*/
+/*========== hero ===========*/
 .hero {
   background-color: var(--secondary-background-color);
   text-align: center;
@@ -127,8 +129,10 @@ img {
   color: var(--tertiary-text-colour-lite);
   margin-bottom: 30px;
 }
-
 .hero-btn {
+  border: transparent;
+  border-radius: 4px;
+  padding: 10px 32px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -136,6 +140,7 @@ img {
   cursor: pointer;
   background-color: var(--accent-text-colour);
   color: var(--tertiary-text-colour-lite);
+  filter: drop-shadow(0px 4px 4px var(--btn-shadow));
 }
 
 .hero-btn:hover,
@@ -204,9 +209,9 @@ img {
 .our-team-item {
   flex-basis: calc((100% - 120px) / 4);
   margin-left: 30px;
-  border: transparent
-  border-radius: 4px;
-  filter: drop-shadow(0px 4px 4px var(--btn-shadow));
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .our-team-person {
   padding-top: 30px;
@@ -227,7 +232,7 @@ img {
   color: var(--secondary-text-colour-medium);
 }
 
-/* ===== Подвал ===== */
+/* ===== footer ===== */
 .footer {
   background-color: var(--secondary-background-color);
 }
@@ -246,6 +251,9 @@ img {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+.footer-item:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .footer-addresses-link {
